@@ -5,6 +5,25 @@ section .text
 	global start
 
 start:
+cli
+jmp 0x0000:ZeroSeg
+ZeroSeg:						;; Set all segment registers to 0
+	xor ax, ax
+	mov ss, ax
+	mov ds, ax
+	mov es, ax
+	mov fs, ax
+	mov gs, ax
+	mov sp, start				;; Set stack pointer
+	cld							;; Clear direction flag
+sti
+
+
+push ax							;; Reset disk
+xor ax, ax
+int 0x13
+pop ax
+
 mov si, STR						;; Put string in si
 call printf
 
