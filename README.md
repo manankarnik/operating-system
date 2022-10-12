@@ -1,6 +1,6 @@
 
 # Operating System
-Simple boot sector written in x86_64 Assembly
+Simple boot sector written in x86\_64 Assembly
 
 ## Required packages
 - make (For makefile)
@@ -26,7 +26,7 @@ make
 ```
 
 #### Emulate
-Uses qemu-x86_64 to emulate boot sector
+Uses qemu-system-x86\_64 to emulate boot sector
 ```sh
 make run
 ```
@@ -46,9 +46,13 @@ make clean
 ## Functions
 #### printf
 Prints a string using int 0x10. Move the string defined by db to si register.
+- 0x0a:	Line Feed (New line)
+- 0x0d:	Carriage Return
+- 0:	Terminates string
 ```asm
-mov     si, STRING
+mov     si, STR
 call    printf
+STR:	db "Hello World!", 0x0a, 0x0d, 0
 ```
 
 #### printh
@@ -65,3 +69,6 @@ mov     al, 1
 mov     cl, 2
 call    readDisk
 ```
+
+## Reference
+[Writing an Operating System - theMike97_ (Youtube playlist)](https://www.youtube.com/playlist?list=PLmlvkUN3-1MNKwINqdCDtTdNDjfBmWcZA)
