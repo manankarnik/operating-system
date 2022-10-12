@@ -31,7 +31,11 @@ mov al, 1						;; Number of sectors to read
 mov cl, 2						;; Sector
 call readDisk
 
-mov dx, 0x1234
+
+mov si, STR_HEX_INFO
+call printf
+
+mov dx, [0x7c00 + 510]
 call printh
 
 jmp second_sector
@@ -44,6 +48,7 @@ jmp $							;; Loop
 
 STR: db "Hello World!", 0x0a, 0x0d, 0
 STR_TEST: db "String loaded from second sector", 0x0a, 0x0d, 0 
+STR_HEX_INFO: db "Last two bytes of Bootloader: ", 0
 
 ;; Padding and magic number
 times 510 - ($ - $$) db 0
