@@ -30,11 +30,16 @@ call printf
 mov al, 1						;; Number of sectors to read
 mov cl, 2						;; Sector
 call readDisk
+
+mov dx, 0x1234
+call printh
+
 jmp second_sector
 
 jmp $							;; Loop
 
 %include "./printf.asm"
+%include "./printh.asm"
 %include "./read_disk.asm"
 
 STR: db "Hello World!", 0x0a, 0x0d, 0
