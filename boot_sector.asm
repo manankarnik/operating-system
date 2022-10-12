@@ -1,24 +1,24 @@
-[org 0x7c00]
+[org 0x7c00]			;; Specify load address
 
-mov si, STR
+mov si, STR				;; Put string in si
 call printf
 
-jmp $
+jmp $					;; Loop
 
 printf:
-	pusha
-	char_loop:
-		mov al, [si]
-		cmp al, 0
-		jne print_char
-		popa
-		ret
+	push ax
+	mov ah, 0x0e		;; Move cursor forward
 
-	print_char:
-		mov ah, 0x0e
-		int 0x10
-		add si, 1
-		jmp char_loop
+	loop:
+		mov al, [si]	;; Move current char pointed by si to al
+		cmp al, 0		;; Check if al is 0
+		je break		;; If equal break
+		int 0x10		;; Write
+		inc si			;; Increment si
+		jmp loop
+	break:
+		pop ax
+		ret
 
 STR: db "Hello World!", 0
 
