@@ -70,5 +70,16 @@ mov     cl, 2
 call    readDisk
 ```
 
+#### testA20
+Function to test if the A20 line is enabled or disabled. Returns value to ax.
+- 0: Disabled
+- 1: Enabled
+```asm
+call	testA20
+
+;; Print return value
+mv	dx, ax
+call	printh
+```
 ## Reference
 [Writing an Operating System - theMike97_ (Youtube playlist)](https://www.youtube.com/playlist?list=PLmlvkUN3-1MNKwINqdCDtTdNDjfBmWcZA)
