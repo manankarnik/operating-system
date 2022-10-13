@@ -85,7 +85,7 @@ call	printh
 #### enableA20
 Function to enable A20 line
 ```asm
-call enableA20
+call	enableA20
 ```
 
 ## Reference
