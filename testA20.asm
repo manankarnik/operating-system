@@ -11,9 +11,9 @@
 testA20:
 pusha
 
-mov ax, [0x7dfe]	;; Magic number location [0x7c00 + 510]
-mov dx, ax
-call printh
+;; mov ax, [0x7dfe]	;; Magic number location [0x7c00 + 510]
+;; mov dx, ax
+;; call printh
 
 push bx
 mov bx, 0xffff
@@ -35,18 +35,18 @@ mov ax, 1			;; If not equal set ax to 1
 ret
 
 testA20_continue:
-mov ax, [0x7dff]	;; Move one over and print
-mov dx, ax
-call printh
+;; mov ax, [0x7dff]	;; Move one over and print
+;; mov dx, ax
+;; call printh
 
 push bx
 mov bx, 0xffff
 mov es, bx
 pop bx
 
-mov bx, 0x7e0f		;; Segment
-mov dx, [es:bx]
-call printh
+;; mov bx, 0x7e0f		;; Segment
+;; mov dx, [es:bx]
+;; call printh
 
 cmp ax, dx
 je testA20_exit
