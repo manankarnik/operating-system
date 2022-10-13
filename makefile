@@ -5,6 +5,7 @@ boot_sector.bin:boot_sector.asm printf.asm printh.asm read_disk.asm testA20.asm
 clean:
 	@echo "Removing binary..."
 	@rm boot_sector.bin
+	@rm os.iso
 
 run:
 	@echo "Running..."
