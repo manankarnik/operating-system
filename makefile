@@ -1,4 +1,4 @@
-boot_sector.bin:boot_sector.asm printf.asm printh.asm read_disk.asm testA20.asm
+boot_sector.bin:boot_sector.asm printf.asm printh.asm read_disk.asm testA20.asm enableA20.asm
 	@echo "Creating binary..."
 	@nasm boot_sector.asm -f bin -o boot_sector.bin
 

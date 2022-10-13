@@ -81,5 +81,12 @@ call	testA20
 mv	dx, ax
 call	printh
 ```
+
+#### enableA20
+Function to enable A20 line
+```asm
+call enableA20
+```
+
 ## Reference
 [Writing an Operating System - theMike97_ (Youtube playlist)](https://www.youtube.com/playlist?list=PLmlvkUN3-1MNKwINqdCDtTdNDjfBmWcZA)
