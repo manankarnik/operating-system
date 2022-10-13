@@ -38,6 +38,18 @@ call printf
 mov dx, [0x7c00 + 510]
 call printh
 
+
+;; mov ax, 0x2400					;; Disable A20 line
+;; int 0x15
+
+mov si, STR_A20_TEST
+call printf
+call testA20
+mov si, STR_A20_RES
+call printf
+mov dx, ax
+call printh
+
 jmp second_sector
 
 jmp $							;; Loop
@@ -45,9 +57,12 @@ jmp $							;; Loop
 %include "./printf.asm"
 %include "./printh.asm"
 %include "./read_disk.asm"
+%include "./testA20.asm"
 
 STR: db "Hello World!", 0x0a, 0x0d, 0
 STR_TEST: db "String loaded from second sector", 0x0a, 0x0d, 0 
+STR_A20_TEST: db "A20 Test: ", 0x0a, 0x0d, 0
+STR_A20_RES: db "A20 Test Result (0 = Disabled): ", 0
 STR_HEX_INFO: db "Last two bytes of Bootloader: ", 0
 
 ;; Padding and magic number
