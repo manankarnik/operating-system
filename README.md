@@ -8,7 +8,7 @@ Simplest boot sector written in x86\_64 Assembly. Hangs after booting.
 - cdrtools (For generating ISO)
 
 ## Cloning and execution
-#### Clone repository
+#### Clone branch
 ```sh
 git clone --single-branch -b 01-simplest-boot-sector https://github.com/MananKarnik/operating-system.git
 ```
