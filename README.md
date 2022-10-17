@@ -13,6 +13,11 @@ Simplest boot sector written in x86\_64 Assembly. Prints a character and hangs.
 git clone https://github.com/manankarnik/operating-system.git
 ```
 
+#### Change branch
+```sh
+git checkout 03-print-function
+```
+
 #### Change directory
 ```sh
 cd operating-system
