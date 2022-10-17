@@ -13,6 +13,11 @@ Simplest boot sector written in x86\_64 Assembly. Hangs after booting.
 git clone https://github.com/manankarnik/operating-system.git
 ```
 
+#### Change branch
+```sh
+git checkout 01-simplest-boot-sector
+```
+
 #### Change directory
 ```sh
 cd operating-system
