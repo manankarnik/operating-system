@@ -54,5 +54,12 @@ call    print
 STR:	db "Hello World!", 0x0a, 0x0d, 0
 ```
 
+#### print\_hex
+Prints hexadecimal value. Move either a hexadecimal or memory address to dx register.
+```asm
+mov     dx, 0x1234
+call    print_hex
+```
+
 ## Reference
 [OS Development PDF](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
