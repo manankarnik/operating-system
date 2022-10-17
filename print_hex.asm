@@ -3,7 +3,7 @@ print_hex:
     mov cl, 12                    ; Used for bit shift  
     mov di, 2                     ; Used for pattern offset
     mov si, HEX_PATTERN           ; Move pattern in si
-hex_loop:
+.loop:
     mov bx, dx                    ; Move string in bx
     shr bx, cl                    ; Shift right cl bits
     and bx, 0x000f                ; Bit mask
@@ -12,9 +12,9 @@ hex_loop:
     sub cl, 4
     inc di
     cmp di, 6
-    je hex_break
-    jmp hex_loop
-hex_break:
+    je .break
+    jmp .loop
+.break:
     call print
     popa
     ret
