@@ -1,4 +1,4 @@
-boot_sector.bin:boot_sector.asm
+boot_sector.bin:boot_sector.asm print.asm print_hex.asm read_disk.asm
 	@echo "Creating binary..."
 	@nasm boot_sector.asm -f bin -o boot_sector.bin
 
