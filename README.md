@@ -62,7 +62,7 @@ call    print_hex
 ```
 
 #### read\_disk
-Reads sectors from disk
+Reads sectors from disk.
 - ```al```: Number of sectors to read
 - ```cl```: Sector to be read
 ```asm
