@@ -1,4 +1,3 @@
-
 # Operating System
 Simple boot sector written in x86\_64 Assembly
 
@@ -11,7 +10,7 @@ Simple boot sector written in x86\_64 Assembly
 ## Cloning and execution
 #### Clone repository
 ```sh
-git clone https://github.com/MananKarnik/operating-system.git
+git clone https://github.com/manankarnik/operating-system.git
 ```
 
 #### Change directory
