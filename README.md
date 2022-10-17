@@ -1,5 +1,5 @@
 # Operating System
-Simplest boot sector written in x86\_64 Assembly. Prints a character and hangs.
+Simple boot sector written in x86\_64 Assembly. Prints a string and hangs.
 
 ## Required packages
 - make (For makefile)
