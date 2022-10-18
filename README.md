@@ -71,5 +71,16 @@ mov	cl, 2
 call	read_disk
 ```
 
-## Reference
-[OS Development PDF](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
+#### test\_A20\_line
+Tests whether A20 line is enabled. Returns value to ax.
+- 0: Disabled
+- 1: Enabled
+``` asm
+call	test_A20_line
+mov	dx, ax    
+call	print_hex
+```
+
+## References
+- [OS Development PDF](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)  
+- [Testing the A20 line - theMike97_](https://www.youtube.com/watch?v=Munv7Afo5OI)
