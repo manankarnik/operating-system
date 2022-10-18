@@ -13,6 +13,11 @@ Simple boot sector written in x86\_64 Assembly. Reads from disk and prints strin
 git clone https://github.com/manankarnik/operating-system.git
 ```
 
+#### Change branch
+```sh
+git checkout 05-read_disk-function
+```
+
 #### Change directory
 ```sh
 cd operating-system
