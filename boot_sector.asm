@@ -12,7 +12,7 @@ jmp $                           ; Loop
 %include "print.asm"            ; Include print function
 %include "print_hex.asm"        ; Include print_hex function
 %include "read_disk.asm"        ; Include read_disk function
-%include "test_A20_line.asm"    ; Include read_disk function
+%include "test_A20_line.asm"    ; Include test_A20_line function
 
 times 510 - ($ - $$) db 0       ; Padding
 dw 0xaa55                       ; Magic number
